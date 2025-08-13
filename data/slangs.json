@@ -1,0 +1,93 @@
+[
+    {
+        "word": "Chililo",
+        "language": "Bemba",
+        "category": "Expression",
+        "meaning": "Funeral or mourning ceremony",
+        "example_native": "Ba mayo nabaya ku chililo.",
+        "example_translation": "My mom has gone to a funeral.",
+        "audio": "chililo.mp3"
+    },
+    {
+        "word": "Ni zee",
+        "language": "Nyanja",
+        "category": "Expression",
+        "meaning": "Cool Talk",
+        "example_native": "Awe mudala, iyi yeve ni zee maningi che.",
+        "example_translation": "No worries, bro its all good.",
+        "audio": "nizee.mp3"
+    },
+    {
+        "word": "Mukwai",
+        "language": "Bemba",
+        "category": "Greeting",
+        "meaning": "Respectful greeting, meaning 'sir' or 'madam'",
+        "example_native": "Mukwai, mwaiseni?",
+        "example_translation": "Sir/Madam, you are welcome?",
+        "audio": "mukwai.mp3"
+    },
+    {
+        "word": "Chibuku",
+        "language": "Nyanja",
+        "category": "Food",
+        "meaning": "Traditional beer made from maize",
+        "example_native": "Tikagule chibuku.",
+        "example_translation": "Let's go buy traditional beer.",
+        "audio": "chibuku.mp3"
+    },
+    {
+        "word": "Boma",
+        "language": "Bemba",
+        "category": "Expression",
+        "meaning": "Government or authority",
+        "example_native": "Boma ni boma.",
+        "example_translation": "Government is government.",
+        "audio": "boma.mp3"
+    },
+    {
+        "word": "Nsima",
+        "language": "Nyanja",
+        "category": "Food",
+        "meaning": "Zambian staple food made from maize meal",
+        "example_native": "Nikudya nsima na ndiyo.",
+        "example_translation": "I'm eating nshima with relish.",
+        "audio": "nshima.mp3"
+    },
+
+    {
+        "word": "Balibe plan",
+        "language": "Nyanja",
+        "category": "Expression",
+        "meaning": "No direction, just messing around",
+        "example_native": "Abo balibe plan, bango zunguluka mu town che ai.",
+        "example_translation": "Those guys have no direction, they are just moving around town .",
+        "audio": "balibeplan.mp3"
+    },
+    {
+        "word": "Paipa pano",
+        "language": "Nyanja",
+        "category": "Expression",
+        "meaning": "its getting serious",
+        "example_native": "paipa pano, muzimai akamba sitikudya lelo .",
+        "example_translation": "Its getting serious here, mom has said we are not eating today.",
+        "audio": "paipapano.mp3"
+    },
+    {
+        "word": "Kaya",
+        "language": "Nyanja",
+        "category": "Expression",
+        "meaning": "i dont know/whatever",
+        "example_native": "Kaya, kapena ana ti nama.",
+        "example_translation": "I dont know, maybe he lied to us.",
+        "audio": "kaya.mp3"
+    },
+    {
+        "word": "Kwati ni movie",
+        "language": "Nyanja",
+        "category": "Fun",
+        "meaning": "More like a movie",
+        "example_native": "Drama yapa facebook kwati ni movie.",
+        "example_translation": "That facebook drama was like a movie.",
+        "audio": "kwatinimovie.mp3"
+    }
+]
