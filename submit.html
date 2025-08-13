@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Slang - Zed Slangs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="Zed Slangs Dictionary Logo" class="logo-img">
+                        <span class="logo-text">Zed Slangs</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="dictionary.html">Dictionary</a>
+                    <a href="submit.html" class="active">Submit</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="submit-header">
+            <div class="container">
+                <h1 class="page-title">Submit New Slang</h1>
+                <p class="page-subtitle">Help us grow the dictionary by contributing new Zambian slangs</p>
+            </div>
+        </section>
+
+        <section class="submit-form">
+            <div class="container">
+                <div class="form-container">
+                    <form id="submitForm" class="slang-form">
+                        <div class="form-group">
+                            <label for="slangWord">Slang Word *</label>
+                            <input type="text" id="slangWord" name="slangWord" required 
+                                   placeholder="Enter the slang word" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slangLanguage">Language *</label>
+                            <select id="slangLanguage" name="slangLanguage" required class="form-select">
+                                <option value="">Select Language</option>
+                                <option value="Bemba">Bemba</option>
+                                <option value="Nyanja">Nyanja</option>
+                                <option value="Tonga">Tonga</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slangCategory">Category *</label>
+                            <select id="slangCategory" name="slangCategory" required class="form-select">
+                                <option value="">Select Category</option>
+                                <option value="Fun">Fun</option>
+                                <option value="Money">Money</option>
+                                <option value="Personality">Personality</option>
+                                <option value="Expression">Expression</option>
+                                <option value="Insult">Insult</option>
+                                <option value="Greeting">Greeting</option>
+                                <option value="Food">Food</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slangMeaning">Meaning (English) *</label>
+                            <textarea id="slangMeaning" name="slangMeaning" required 
+                                      placeholder="Explain what this slang means in English" 
+                                      class="form-textarea" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slangExampleNative">Example Sentence (Native Language) *</label>
+                            <textarea id="slangExampleNative" name="slangExampleNative" required 
+                                      placeholder="Provide an example sentence in the original language" 
+                                      class="form-textarea" rows="2"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slangExampleTranslation">Example Translation (English) *</label>
+                            <textarea id="slangExampleTranslation" name="slangExampleTranslation" required 
+                                      placeholder="Translate the example sentence to English" 
+                                      class="form-textarea" rows="2"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="submitterName">Your Name</label>
+                            <input type="text" id="submitterName" name="submitterName" 
+                                   placeholder="Your name (optional)" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="submitterEmail">Your Email</label>
+                            <input type="email" id="submitterEmail" name="submitterEmail" 
+                                   placeholder="Your email (optional)" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slangAudio">Audio File (Optional)</label>
+                            <input type="file" id="slangAudio" name="slangAudio" 
+                                   accept="audio/*" class="form-input">
+                            <small class="form-help">Upload an audio file to help with pronunciation (MP3, WAV, or M4A)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalNotes">Additional Notes</label>
+                            <textarea id="additionalNotes" name="additionalNotes" 
+                                      placeholder="Any additional context or notes about this slang" 
+                                      class="form-textarea" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Submit Slang</button>
+                            <button type="reset" class="btn btn-secondary">Reset Form</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="submission-guidelines">
+                    <h3>Submission Guidelines</h3>
+                    <ul>
+                        <li>Ensure the slang is authentic and commonly used in Zambia</li>
+                        <li>Provide accurate translations and meanings</li>
+                        <li>Include context-appropriate example sentences</li>
+                        <li>Specify the correct language and category</li>
+                        <li>Be respectful of cultural sensitivities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Zed Slangs Dictionary. Celebrating Zambian culture through language.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zed Slangs Dictionary - Discover Zambian Culture</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="home">
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="Zed Slangs Dictionary Logo" class="logo-img">
+                        <span class="logo-text">Zed Slangs</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="dictionary.html">Dictionary</a>
+                    <a href="submit.html">Submit</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container hero-flex">
+                <div class="hero-content">
+                    <h1 class="hero-title animate-fade">
+                        Discover <span class="highlighted">Zambian Culture</span> Through Slangs
+                        <span class="headline-underline"></span>
+                    </h1>
+                    <p class="hero-subtitle animate-fade">
+                        Explore the rich linguistic heritage of Zambia with slangs from Bemba, Nyanja, and Tonga languages. 
+                        Learn, share, and celebrate our cultural expressions. The language found on the streets and in everyday conversation.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="dictionary.html" class="btn btn-primary pill">Open Dictionary</a>
+                        <a href="about.html" class="btn btn-secondary pill">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <img src="assets/chatting1.png" alt="Illustration of diverse Zambian people chatting and laughing, dressed in vibrant cultural attire" class="illustration-img">
+                    <div class="bubble bubble2 pop-animate">"Nizingati!"</div>
+                    <div class="bubble bubble3 pop-animate">"Eyaah!"</div>
+                    <span class="pattern-icon pattern1"></span>
+                </div>
+            </div>
+            <div class="animated-bg">
+                <span class="bg-icon icon1">💬</span>
+                <span class="bg-icon icon2">🗨️</span>
+                <span class="bg-icon icon3">✨</span>
+            </div>
+        </section>
+
+        <section class="slang-of-day">
+            <div class="container">
+                <h2 class="section-title slang-animate">🌟 Slang of the Day</h2>
+                <div class="slang-card featured slang-gradient">
+                    <div class="slang-content">
+                        <div class="slang-header">
+                            <h3 class="slang-word bounce-hover" id="slangWord">Loading...</h3>
+                            <span class="language-badge animated-glow" id="slangLanguage">Bemba</span>
+                        </div>
+                        <p class="slang-meaning fade-in" id="slangMeaning">Discovering today's slang...</p>
+                        <div class="slang-example">
+                            <p class="example-native fade-in" id="slangExampleNative"></p>
+                            <p class="example-translation fade-in" id="slangExampleTranslation"></p>
+                        </div>
+                        <div class="slang-actions">
+                            <button id="playSlangAudio" class="btn btn-audio">
+                                <span class="audio-icon">🔊</span>
+                                <span class="soundwave"></span>
+                                Play Audio
+                            </button>
+                            <button id="favoriteSlang" class="btn btn-favorite pill" aria-label="Toggle favorite">
+                                <span class="heart">❤️</span> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="language-preview">
+            <div class="container">
+                <h2 class="section-title">Explore Languages</h2>
+                <div class="language-grid">
+                    <div class="language-card" data-language="Bemba">
+                        <div class="language-icon">🇿🇲</div>
+                        <h3>Bemba</h3>
+                        <p>The most widely spoken language in Zambia, rich with cultural expressions and modern slangs.</p>
+                        <a href="dictionary.html?lang=bemba" class="btn btn-outline">Explore Bemba</a>
+                    </div>
+                    <div class="language-card" data-language="Nyanja">
+                        <div class="language-icon">🇿🇲</div>
+                        <h3>Nyanja</h3>
+                        <p>Spoken in Lusaka and surrounding areas, featuring vibrant urban slangs and expressions.</p>
+                        <a href="dictionary.html?lang=nyanja" class="btn btn-outline">Explore Nyanja</a>
+                    </div>
+                    <div class="language-card" data-language="Tonga">
+                        <div class="language-icon">🇿🇲</div>
+                        <h3>Tonga</h3>
+                        <p>Southern Zambia's cultural language, preserving traditional wisdom in modern slangs.</p>
+                        <a href="dictionary.html?lang=tonga" class="btn btn-outline">Explore Tonga</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Zed Slangs?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎧</div>
+                        <h3>Audio Learning</h3>
+                        <p>Listen to authentic pronunciations and example sentences</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Save Favorites</h3>
+                        <p>Build your personal collection of favorite slangs</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Smart Search</h3>
+                        <p>Find exactly what you're looking for with instant search</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Perfect experience on all devices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Zed Slangs Dictionary. Celebrating Zambian culture through language.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+``` 

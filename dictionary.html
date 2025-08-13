@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary - Zed Slangs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/logo.png" alt="Zed Slangs Dictionary Logo" class="logo-img">
+                        <span class="logo-text">Zed Slangs</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="dictionary.html" class="active">Dictionary</a>
+                    <a href="submit.html">Submit</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="dictionary-header">
+            <div class="container">
+                <h1 class="page-title">Zambian Slangs Dictionary</h1>
+                <p class="page-subtitle">Explore slangs from Bemba, Nyanja, and Tonga languages</p>
+            </div>
+        </section>
+
+        <section class="search-filters">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search slangs..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="languageFilter">Language:</label>
+                        <select id="languageFilter" class="filter-select">
+                            <option value="">All Languages</option>
+                            <option value="Bemba">Bemba</option>
+                            <option value="Nyanja">Nyanja</option>
+                            <option value="Tonga">Tonga</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category:</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="Fun">Fun</option>
+                            <option value="Money">Money</option>
+                            <option value="Personality">Personality</option>
+                            <option value="Expression">Expression</option>
+                            <option value="Insult">Insult</option>
+                            <option value="Greeting">Greeting</option>
+                            <option value="Food">Food</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="favoritesFilter">Show:</label>
+                        <select id="favoritesFilter" class="filter-select">
+                            <option value="all">All Slangs</option>
+                            <option value="favorites">Favorites Only</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dictionary-content">
+            <div class="container">
+                <div class="results-info">
+                    <span id="resultsCount">Loading slangs...</span>
+                </div>
+                
+                <div class="view-all-container">
+                    <button class="btn btn-primary" id="viewAllBtn">View All Slangs</button>
+                    <button class="btn btn-outline" id="showLimitedBtn" style="display: none;">Show Limited</button>
+                </div>
+                
+                <div class="slangs-grid" id="slangsGrid">
+                    <!-- Slang cards will be dynamically loaded here -->
+                </div>
+                
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-content">
+                        <h3>No slangs found</h3>
+                        <p>Try adjusting your search or filters</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Zed Slangs Dictionary. Celebrating Zambian culture through language.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
