@@ -20,6 +20,7 @@ function getAudioUrlForSlang(slang) {
 
 // Keep track of the currently active button
 let activeAudioButton = null;
+let activeAudioSlang = null;
 
 function playAudioForSlang(slang, uiBtn) {
     const url = getAudioUrlForSlang(slang);
@@ -29,57 +30,77 @@ function playAudioForSlang(slang, uiBtn) {
     }
 
     try {
-        // Reset any previous button state
-        if (activeAudioButton && activeAudioButton !== uiBtn) {
+        // If this button is the same as the active one
+        if (activeAudioButton === uiBtn) {
+            if (!audioPlayer.paused) {
+                // Pause if playing
+                audioPlayer.pause();
+                uiBtn.textContent = '🔊 Play';
+                showNotification('Audio paused');
+            } else {
+                // Resume if paused
+                audioPlayer.play().then(() => {
+                    uiBtn.textContent = '🔊 Playing...';
+                    showNotification(`${activeAudioSlang} resumed`);
+                }).catch(err => {
+                    console.error('Audio resume error:', err);
+                    showNotification('Unable to resume audio.');
+                });
+            }
+            return;
+        }
+
+        // Different button clicked — stop any currently playing audio
+        if (activeAudioButton) {
             activeAudioButton.disabled = false;
             activeAudioButton.textContent = activeAudioButton.dataset.originalText || '🔊 Play';
         }
-
-        // Pause any currently playing audio
         audioPlayer.pause();
 
         // Load new audio
         audioPlayer.src = url;
         audioPlayer.currentTime = 0;
 
-        // If button provided, update UI
+        // Save state
+        activeAudioButton = uiBtn;
+        activeAudioSlang = typeof slang === 'object' && slang.word ? slang.word : slang;
+
+        // Save original button text
         if (uiBtn) {
-            // Save original button text
             uiBtn.dataset.originalText = uiBtn.textContent;
-            uiBtn.disabled = true;
+            uiBtn.disabled = false;
             uiBtn.textContent = '🔊 Playing...';
-            activeAudioButton = uiBtn;
         }
 
-        // Get the slang text (handle if slang is object or string)
-        let slangText = typeof slang === 'object' && slang.word ? slang.word : slang;
+        showNotification(`${activeAudioSlang} playing`);
 
-        // Show notification: "<slang> playing"
-        showNotification(`${slangText} playing`);
-
-        // When audio ends, reset button state
+        // When audio ends, reset button
         audioPlayer.onended = () => {
             if (uiBtn) {
                 uiBtn.disabled = false;
                 uiBtn.textContent = uiBtn.dataset.originalText;
             }
             activeAudioButton = null;
+            activeAudioSlang = null;
         };
 
-        // Play the audio
+        // Play new audio
         audioPlayer.play().catch(err => {
+            console.error('Audio play error:', err);
+            showNotification('Audio not found.');
             if (uiBtn) {
                 uiBtn.disabled = false;
                 uiBtn.textContent = uiBtn.dataset.originalText;
             }
-            console.error('Audio play error:', err);
-            showNotification('audio not found.');
             activeAudioButton = null;
+            activeAudioSlang = null;
         });
+
     } catch (e) {
         console.error(e);
         showNotification('Audio not supported in this browser.');
         activeAudioButton = null;
+        activeAudioSlang = null;
     }
 }
 
