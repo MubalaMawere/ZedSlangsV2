@@ -1,6 +1,8 @@
 /* ===== ZED SLANGS DICTIONARY STYLES ===== */
 
 /* CSS Variables for Zambian Color Palette */
+
+
 :root {
     /* Primary Colors */
     --primary-green: #1B4C27;
@@ -572,19 +574,31 @@ p {
     100% { transform: scale(1.15);}
 }
 .highlighted {
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffb300 0%, #ff9800 50%, #ff6f00 100%);
+    
+    /* Chrome, Edge, Safari */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Firefox */
+    background-clip: text;
+    color: transparent;
+}
+
+/*.highlighted {
     color: #ffb300;
     font-weight: 700;
     background: linear-gradient(90deg,#ffb300 60%,#ff9800 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+}*/
 .headline-underline {
     display: block;
     position: absolute;
     left: 0; bottom: -10px;
     width: 60%;
     height: 12px;
-    background: url('../assets/brush-stroke.png') no-repeat center/contain;
     pointer-events: none;
 }
 .hero-buttons .btn.pill {

@@ -17,35 +17,76 @@ function getAudioUrlForSlang(slang) {
     return AUDIO_BASE_PATH + encodeURIComponent(slang.audio);
 }
 
+
+// Keep track of the currently active button
+let activeAudioButton = null;
+
 function playAudioForSlang(slang, uiBtn) {
     const url = getAudioUrlForSlang(slang);
     if (!url) {
         showNotification('No audio found for this slang.');
         return;
     }
+
     try {
+        // Reset any previous button state
+        if (activeAudioButton && activeAudioButton !== uiBtn) {
+            activeAudioButton.disabled = false;
+            activeAudioButton.textContent = activeAudioButton.dataset.originalText || '🔊 Play';
+        }
+
+        // Pause any currently playing audio
         audioPlayer.pause();
+
+        // Load new audio
         audioPlayer.src = url;
         audioPlayer.currentTime = 0;
+
+        // If button provided, update UI
         if (uiBtn) {
-            const original = uiBtn.textContent;
+            // Save original button text
+            uiBtn.dataset.originalText = uiBtn.textContent;
             uiBtn.disabled = true;
             uiBtn.textContent = '🔊 Playing...';
-            audioPlayer.onended = () => {
-                uiBtn.disabled = false;
-                uiBtn.textContent = original;
-            };
+            activeAudioButton = uiBtn;
         }
+
+        // Get the slang text (handle if slang is object or string)
+        let slangText = typeof slang === 'object' && slang.word ? slang.word : slang;
+
+        // Show notification: "<slang> playing"
+        showNotification(`${slangText} playing`);
+
+        // When audio ends, reset button state
+        audioPlayer.onended = () => {
+            if (uiBtn) {
+                uiBtn.disabled = false;
+                uiBtn.textContent = uiBtn.dataset.originalText;
+            }
+            activeAudioButton = null;
+        };
+
+        // Play the audio
         audioPlayer.play().catch(err => {
-            if (uiBtn) { uiBtn.disabled = false; }
+            if (uiBtn) {
+                uiBtn.disabled = false;
+                uiBtn.textContent = uiBtn.dataset.originalText;
+            }
             console.error('Audio play error:', err);
-            showNotification('Audio playing.');
+            showNotification('audio not found.');
+            activeAudioButton = null;
         });
     } catch (e) {
         console.error(e);
         showNotification('Audio not supported in this browser.');
+        activeAudioButton = null;
     }
 }
+
+
+
+
+
 
 
 // Initialize favorites from localStorage
@@ -749,4 +790,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
-});
+}); 
+
+
