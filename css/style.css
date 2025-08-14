@@ -260,7 +260,7 @@ p {
 
 /* --- Add to Favorites Button: Premium, creative, animated --- */
 .btn-favorite {
-    background: linear-gradient(90deg,#ffb300 60%,#ff9800 100%);
+    background: linear-gradient(90deg,#ffb30073 60%,#ff99009a 100%);
     color: #fff;
     font-weight: 600;
     border: none;
@@ -362,7 +362,7 @@ p {
     width: 380px;
     max-width: 95vw;
     border-radius: 2rem;
-    border: 6px solid #ffd700;
+    border: 6px solid #ffd90000;
     box-shadow: 0 0 0 8px #fff, 0 8px 32px rgba(0,0,0,0.12);
     background: linear-gradient(120deg,#fffbe6 60%,#ffe0b2 100%);
     object-fit: cover;
@@ -542,7 +542,7 @@ p {
     position: absolute;
     font-size: 1.1rem;
     background: #fffbe6;
-    color: #ff9800;
+    color: #ff99007a;
     border-radius: 2rem;
     padding: 0.5rem 1.2rem;
     box-shadow: 0 2px 12px rgba(255,168,0,0.08);
