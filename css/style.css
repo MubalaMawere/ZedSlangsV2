@@ -220,6 +220,17 @@ p {
     transition: box-shadow 0.18s, transform 0.18s;
     border: none;
 }
+/* Mobile-specific layout fix */
+@media (max-width: 480px) {
+    .slang-actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px; /* space between the two buttons */
+        margin-top: 10px;
+    }
+}
+
+
 .btn-audio .audio-icon {
     font-size: 1.2em;
     margin-right: 0;
@@ -259,7 +270,7 @@ p {
 }
 
 /* --- Add to Favorites Button: Premium, creative, animated --- */
-.btn-favorite {
+/*.btn-favorite {
     background: linear-gradient(90deg,#ffb30073 60%,#ff99009a 100%);
     color: #fff;
     font-weight: 600;
@@ -271,7 +282,30 @@ p {
     gap: 0.7rem;
     position: relative;
     transition: background 0.5s cubic-bezier(.77,0,.18,1), color 0.2s, box-shadow 0.18s, transform 0.18s;
+}*/
+/* Targetfavorite button */
+
+.btn-favorite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* prevent full width */
+    min-width: 50px; /* small minimum to fit the icon */
+    max-width: 80px; /* keep it from being too wide */
+    padding: 10px;
+    margin: 0 auto; /* center horizontally */
+    border-radius: 30px;
 }
+/* Adjust specifically for mobile screens */
+@media (max-width: 480px) {
+    .btn-audio{
+        width: 100px;
+        padding: 8px;
+        font-size: 0.8rem; /* adjust icon size */
+    }
+}
+
+
 .btn-favorite .heart {
     font-size: 1.3em;
     transition: color 0.4s cubic-bezier(.77,0,.18,1);

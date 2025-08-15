@@ -495,15 +495,19 @@ function createSlangCard(slang) {
                 <p class="example-native">${slang.example_native}</p>
                 <p class="example-translation">${slang.example_translation}</p>
             </div>
-            <div class="slang-actions">
-                <button class="btn btn-audio" onclick="playSlangAudioFromCard('${slang.word}', this)">
-                    🔊 Play Audio
-                </button>
-                <button class="btn btn-favorite ${isFavorited ? 'favorited' : ''}" 
-                        onclick="toggleFavoriteFromCard('${slangId}')">
-                    <span class='heart'>❤️</span>
-                </button>
-            </div>
+            
+                <div class="slang-actions">
+                
+                    <button class="btn btn-audio" onclick="playSlangAudioFromCard('${slang.word}', this)">
+                        🔊 Play audio
+                    </button>
+                    <button class="btn btn-favorite ${isFavorited ? 'favorited' : ''}" 
+                            onclick="toggleFavoriteFromCard('${slangId}')">
+                        <span class='heart'>❤️</span>
+                    </button>
+                  
+                </div>
+         
         </div>
     `;
     
